@@ -873,8 +873,8 @@ h3 span {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  height: 250px;
-  width: 320px;
+  height: 200px;
+  width: 240px;
 }
 
 .no-gutter {
@@ -892,6 +892,10 @@ h3 span {
 
 .portfolio-box.bg-3 {
   background-image: url("../images/portfolio-3.png");
+}
+
+.portfolio-box.bg-4 {
+  background-image: url("../images/portfolio-4.png");
 }
 
 .portfolio-box .portfolio-box-caption {
@@ -946,7 +950,7 @@ h3 span {
         opacity: 0.8;
         background: #fff;
         text-align: center;
-        width: 320px;
+        width: 240px;
         padding: 0.3em;
         margin: 0 auto;
     }
