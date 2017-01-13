@@ -537,10 +537,10 @@ h3 span {
 }
 
 .profile {
-  width: 170px;
-  height: 140px;
+  width: 160px;
+  height: 180px;
   background-image: url("../images/headshot.jpg");
-  background-size: 170px 140px;
+  background-size: 160px 200px;
   border-radius: 50%;
   margin: 0 0 0 30px;
   background-position: center;
