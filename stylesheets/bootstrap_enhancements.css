@@ -332,113 +332,54 @@ header h1:before {
 }
 
 .pg-fixed-bg.pg-bg-1 h1{
-  position: relative;
-  margin: 0 auto;
-  text-align: center;
-  font-size: 11em;
+  font-size: 12em;
   font-family: Helvetica;
   font-weight: 700;
   color: rgba(255,255,255,.8);
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: rgba(85, 26, 93, 0.64);
   -webkit-text-stroke: 1px #f3ebdd;
-
   @media screen and (min-width: 1000px) {
     -webkit-text-stroke-width: 2px;
   }
 }
 
 .pg-fixed-bg.pg-bg-1 {
-  margin: 0;
-  background: linear-gradient(45deg, #33235b,  #792042, #3d3a5e, #181a3a);
-  background-size: 800% 800%;
-  -webkit-animation: bgColor 30s ease infinite;
-  -moz-animation: bgColor 30s ease infinite;
-  animation: bgColor 30s ease infinite;
+  background-color: #2E294E;
+  background-image: url('../images/bg1.svg'), radial-gradient(200px 500px at center, #f77604 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0));
+  background-size: 125%, 50% 100%;
+  background-position: 0 60%, 0 100%;
+  animation: move 5s linear infinite;
   height: 100%;
-  width: 100%;
-  letter-spacing: 0.025em;
-  text-align: center;
+  border: 2px solid #2E294E;
+  border-right: 0;
+  border-left: 0;
 }
 
-.bg-layer {
-  background: url('../images/overlay.png') repeat;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-h1 span {
-  margin-top: 120px;
-  font-weight: 200;
-  letter-spacing: -0.1em;
-  padding-left: 0.02em;
-  animation-name: textslide;
-  animation-duration: 3s;
-  animation-timing-function: ease-out;
-  display: inline-block;
-}
-
-h3 span {
-  font-family: raleway;
-  font-weight: normal;
-  letter-spacing: -0.1em;
-  animation-name: textfade;
-  animation-duration: 2s;
-  animation-timing-function: ease-out;
-}
-
-/* Animation for background bg-1 */
-@-webkit-keyframes bgColor {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@-moz-keyframes bgColor {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@keyframes bgColor {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-
-@keyframes textslide {
+ /* Animation for background bg-1 */
+@-moz-keyframes move {
   0% {
-    color: rgba(255, 255, 255, 0);
-    text-shadow: 0 0 32px #fff;
-    transform: matrix(1,0,-0.1,1,-50,0);
-  }
-  67% {
-    color: rgba(255, 255, 255, 0);
-    text-shadow: 0 0 0 #fff;
+    background-position: 0 60%, 0 50%;
   }
   100% {
-    color: rgba(255, 255, 255, 1);
-    transform: matrix(1,0,0,1,0,0);
+    background-position: 0 60%, 100% 50%;
   }
 }
-
-@keyframes textfade {
+@keyframes move {
   0% {
-    color: rgba(255, 255, 255, 0);
-    text-shadow: 0 0 8px rgba(255,255,255,.25);
-    transform: matrix(1,0,0.1,1,50,0);
-  }
-  55% {
-    color: rgba(255, 255, 255, 0);
-    text-shadow: 0 0 2px rgba(255,255,255,1);
+    background-position: 0 60%, 0 50%;
   }
   100% {
-    color: rgba(255, 255, 255, 1);
-    text-shadow: 0 0 0 rgba(255,255,255,1);
-    transform: matrix(1,0,0,1,0,0);
+    background-position: 0 60%, 100% 50%;
   }
 }
-
+@-webkit-keyframes move {
+  0% {
+    background-position: 0 60%, 0 50%;
+  }
+  100% {
+    background-position: 0 60%, 100% 50%;
+  }
+}
 
 .pg-fixed-bg.pg-bg-2 {
   background-image: url("../images/bg2.jpg");
